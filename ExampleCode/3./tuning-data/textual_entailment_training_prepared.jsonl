@@ -1,0 +1,30 @@
+{"prompt":"","completion":" premise: A dog is barking at the park."}
+{"prompt":"","completion":" hypothesis: A dog is making noise outside."}
+{"prompt":"","completion":" relationship: E"}
+{"prompt":"","completion":" premise: The cat is sleeping on the couch."}
+{"prompt":"","completion":" hypothesis: The cat is playing with a ball."}
+{"prompt":"","completion":" relationship: C"}
+{"prompt":"","completion":" premise: She is cooking dinner in the kitchen."}
+{"prompt":"","completion":" hypothesis: A woman is preparing a meal."}
+{"prompt":"","completion":" premise: The soccer player scored a goal."}
+{"prompt":"","completion":" hypothesis: The soccer player missed the goal."}
+{"prompt":"","completion":" premise: The book is on the table."}
+{"prompt":"","completion":" hypothesis: There is a book placed on a piece of furniture."}
+{"prompt":"","completion":" premise: The children are playing hide and seek."}
+{"prompt":"","completion":" hypothesis: The children are doing their homework."}
+{"prompt":"","completion":" premise: The artist is painting a beautiful landscape."}
+{"prompt":"","completion":" hypothesis: The artist is creating a piece of artwork."}
+{"prompt":"","completion":" premise: The car stopped at the red light."}
+{"prompt":"","completion":" hypothesis: The car stopped at a traffic signal."}
+{"prompt":"","completion":" premise: The cat is sitting on the mat."}
+{"prompt":"","completion":" hypothesis: There is a cat on the mat."}
+{"prompt":"","completion":" relationship: entailment"}
+{"prompt":"","completion":" premise: The dog is playing in the park."}
+{"prompt":"","completion":" hypothesis: The dog is sleeping."}
+{"prompt":"","completion":" relationship: contradiction"}
+{"prompt":"","completion":" premise: The girl is reading a book in the library."}
+{"prompt":"","completion":" hypothesis: The girl is studying in the library."}
+{"prompt":"","completion":" relationship: neutral"}
+{"prompt":"","completion":" premise: The man is driving a car on the highway."}
+{"prompt":"","completion":" hypothesis: The man is traveling in a vehicle."}
+{"prompt":"","completion":" hypothesis: She is baking a cake."}

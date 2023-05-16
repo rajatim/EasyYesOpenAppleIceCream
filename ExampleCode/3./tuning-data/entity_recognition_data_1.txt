@@ -1,0 +1,31 @@
+Steve PER
+Jobs PER
+founded O
+Apple ORG
+in O
+Cupertino LOC
+, O
+California LOC
+. O
+
+Barack PER
+Obama PER
+was O
+the O
+President ORG
+of O
+the O
+United LOC
+States LOC
+. O
+
+The O
+Eiffel LOC
+Tower LOC
+is O
+located O
+in O
+Paris LOC
+, O
+France LOC
+. O
