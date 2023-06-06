@@ -1,0 +1,864 @@
+{
+	"info": {
+		"_postman_id": "4f2bb76f-0e97-4a0b-aac7-c9fdad79ee13",
+		"name": "Open AI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1166660"
+	},
+	"item": [
+		{
+			"name": "List models",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openai.com/v1/models",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openai",
+						"com"
+					],
+					"path": [
+						"v1",
+						"models"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve model",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openai.com/v1/models/text-davinci-003",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openai",
+						"com"
+					],
+					"path": [
+						"v1",
+						"models",
+						"text-davinci-003"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create completion",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"model\": \"text-davinci-003\",\n  \"prompt\": \"Say this is a t\",\n  \"max_tokens\": 700,\n  \"temperature\": 1,\n  \"top_p\": 1,\n  \"n\": 2,\n  \"stream\": false,\n  \"logprobs\": null,\n  \"stop\": \"\\n\"\n}\n"
+				},
+				"url": {
+					"raw": "https://api.openai.com/v1/completions",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openai",
+						"com"
+					],
+					"path": [
+						"v1",
+						"completions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create completion show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\n//     \"model\": \"text-davinci-003\",\n//     //   \"prompt\": \"Say this is a\",\n//       \"prompt\": \"1+1=\",\n//     // \"prompt\": \"How long does it take Earth to orbit the Sun?\",\n//     \"temperature\": 0,\n//     \"max_tokens\": 256,\n//     \"top_p\": 1,\n//     \"n\": 1,\n//     \"stop\": \"\\n\",\n//     \"stream\": false,\n//     \"logprobs\": null\n//     //   \"frequency_penalty\": 0,\n//     //   \"presence_penalty\": 0\n// }\n{\n        // \"model\": \"text-davinci-003\",\n    \"model\": \"davinci:ft-rajatim-2023-04-23-02-04-06\",\n    // \"prompt\": \"How long does it take Earth to orbit the Sun?\",\n    \"prompt\": \"What is the largest mammal on Earth?\",\n    // \"prompt\": \"1+1=\",\n    \"max_tokens\": 256,\n    \"temperature\": 1,\n    \"top_p\": 1,\n    \"n\": 1,\n    \"stream\": false,\n    \"logprobs\": null,\n    \"stop\": \".\",\n    // \"echo\": true,\n    \"best_of\": 1\n}\n// {\n//   \"model\": \"davinci:ft-rajatim-2023-04-23-02-04-06\",\n//   \"prompt\": \"Say this is a t\",\n//   \"max_tokens\": 700,\n//   \"temperature\": 0,\n//   \"top_p\": 1,\n//   \"n\": 1,\n//   \"stream\": false,\n//   \"logprobs\": null,\n//   \"stop\": \"\\n\"\n// }\n"
+				},
+				"url": {
+					"raw": "https://api.openai.com/v1/completions",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openai",
+						"com"
+					],
+					"path": [
+						"v1",
+						"completions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create chat completion",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"model\": \"gpt-3.5-turbo\",\n    \"messages\": [\n        {\n            \"role\": \"system\",\n            \"content\": \"You are a very brif assistant.\"\n        },\n        {\n            \"role\": \"user\",\n            \"content\": \"Who won the world series in 2020?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"content\": \"The Los Angeles Dodgers won the World Series in 2020.\"\n        },\n        {\n            \"role\": \"user\",\n            \"content\": \"Where was it played?\"\n        }\n        // {\n        //     \"role\": \"user\",\n        //     \"content\": \"who was in the team?\"\n        // }\n    ],\n    \"temperature\": 0.8,\n    \"max_tokens\": 500,\n    \"stream\": false\n}"
+				},
+				"url": {
+					"raw": "https://api.openai.com/v1/chat/completions",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openai",
+						"com"
+					],
+					"path": [
+						"v1",
+						"chat",
+						"completions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create chat completion - logit_bias",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"model\": \"gpt-3.5-turbo\",\n    \"messages\": [\n        {\n            \"role\": \"system\",\n            \"content\": \"You are a helpful assistant.\"\n        },\n        {\n            \"role\": \"user\",\n            \"content\": \"Tell me a joke.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"content\": \"Why did the chicken cross the road?\"\n        }\n    ],\n    \"temperature\": 0.8,\n    \"max_tokens\": 500,\n    \"stream\": false,\n    \"logit_bias\": {\n        \"50256\": -100\n    }\n}"
+				},
+				"url": {
+					"raw": "https://api.openai.com/v1/chat/completions",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openai",
+						"com"
+					],
+					"path": [
+						"v1",
+						"chat",
+						"completions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create edit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"model\": \"text-davinci-edit-001\",\n    \"input\": \"What day of the wek is it?\",\n    \"instruction\": \"Fix the spelling mistakes\"\n  }"
+				},
+				"url": {
+					"raw": "https://api.openai.com/v1/edits",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openai",
+						"com"
+					],
+					"path": [
+						"v1",
+						"edits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"prompt\": \"A cute baby sea otter\",\n    \"n\": 2,\n    \"size\": \"1024x1024\"\n  }"
+				},
+				"url": {
+					"raw": "https://api.openai.com/v1/images/generations",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openai",
+						"com"
+					],
+					"path": [
+						"v1",
+						"images",
+						"generations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create image edit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/tim/Downloads/image_2023_05_23T15_33_28_187Z.png"
+						},
+						{
+							"key": "mask",
+							"type": "file",
+							"src": "/Users/tim/Downloads/image_2023_03_16T08_58_37_461Z.png"
+						},
+						{
+							"key": "prompt",
+							"value": "A cute baby sea otter wearing a beret",
+							"type": "text"
+						},
+						{
+							"key": "n",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": "1024x1024",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.openai.com/v1/images/edits",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openai",
+						"com"
+					],
+					"path": [
+						"v1",
+						"images",
+						"edits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create embeddings",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"input\": \"The food was delicious and the waiter...\",\n    \"model\": \"text-embedding-ada-002\"\n  }"
+				},
+				"url": {
+					"raw": "https://api.openai.com/v1/embeddings",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openai",
+						"com"
+					],
+					"path": [
+						"v1",
+						"embeddings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List files",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openai.com/v1/files",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openai",
+						"com"
+					],
+					"path": [
+						"v1",
+						"files"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload file",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "purpose",
+							"value": "fine-tune",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.openai.com/v1/files",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openai",
+						"com"
+					],
+					"path": [
+						"v1",
+						"files"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete file",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.openai.com/v1/files/{file_id}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openai",
+						"com"
+					],
+					"path": [
+						"v1",
+						"files",
+						"{file_id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve file",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openai.com/v1/files/file-4NzlGcYK7gPVADYD3bQ8SjQI",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openai",
+						"com"
+					],
+					"path": [
+						"v1",
+						"files",
+						"file-4NzlGcYK7gPVADYD3bQ8SjQI"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve file content",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openai.com/v1/files/file-QANV0krOfVFx92HVwGauAi6h/content",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openai",
+						"com"
+					],
+					"path": [
+						"v1",
+						"files",
+						"file-QANV0krOfVFx92HVwGauAi6h",
+						"content"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create fine-tune",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"training_file\": \"file-XGinujblHPwGLSztz8cPS8XY\",\n    \"validation_file\": \"YOUR_VALIDATION_FILE_ID\",\n    \"model\": \"curie\",\n    \"n_epochs\": 4,\n    \"batch_size\": null,\n    \"learning_rate_multiplier\": null,\n    \"prompt_loss_weight\": 0.01,\n    \"compute_classification_metrics\": false\n}"
+				},
+				"url": {
+					"raw": "https://api.openai.com/v1/embeddings",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openai",
+						"com"
+					],
+					"path": [
+						"v1",
+						"embeddings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List fine-tunes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openai.com/v1/fine-tunes",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openai",
+						"com"
+					],
+					"path": [
+						"v1",
+						"fine-tunes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve fine-tune",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openai.com/v1/fine-tunes/ft-yuyIENsSSniodCDYo19qtp5V",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openai",
+						"com"
+					],
+					"path": [
+						"v1",
+						"fine-tunes",
+						"ft-yuyIENsSSniodCDYo19qtp5V"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel fine-tune",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"training_file\": \"file-XGinujblHPwGLSztz8cPS8XY\",\n    \"validation_file\": \"YOUR_VALIDATION_FILE_ID\",\n    \"model\": \"curie\",\n    \"n_epochs\": 4,\n    \"batch_size\": null,\n    \"learning_rate_multiplier\": null,\n    \"prompt_loss_weight\": 0.01,\n    \"compute_classification_metrics\": false\n}"
+				},
+				"url": {
+					"raw": "https://api.openai.com/v1/fine-tunes/{fine_tune_id}/cancel",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openai",
+						"com"
+					],
+					"path": [
+						"v1",
+						"fine-tunes",
+						"{fine_tune_id}",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List fine-tune events",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openai.com/v1/fine-tunes/ft-yuyIENsSSniodCDYo19qtp5V/events",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openai",
+						"com"
+					],
+					"path": [
+						"v1",
+						"fine-tunes",
+						"ft-yuyIENsSSniodCDYo19qtp5V",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete fine-tune model",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.openai.com/v1/models/curie:ft-acmeco-2021-03-03-21-44-20",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openai",
+						"com"
+					],
+					"path": [
+						"v1",
+						"models",
+						"curie:ft-acmeco-2021-03-03-21-44-20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create moderation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"input\": \"I want to kill them.\"\n  }"
+				},
+				"url": {
+					"raw": "https://api.openai.com/v1/moderations",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openai",
+						"com"
+					],
+					"path": [
+						"v1",
+						"moderations"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

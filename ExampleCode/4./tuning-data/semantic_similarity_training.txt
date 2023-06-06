@@ -1,0 +1,19 @@
+text1: The weather is nice today.
+text2: Today's weather is pleasant.
+score: 0.9
+
+text1: I have a cat named Whiskers.
+text2: Whiskers is the name of my cat.
+score: 1.0
+
+text1: He went to the store to buy some groceries.
+text2: She went to the park to play with her friends.
+score: 0.3
+
+text1: Are you going to the party tonight?
+text2: Will you attend the party this evening?
+score: 0.85
+
+text1: Apples are a type of fruit.
+text2: Apples are a kind of vegetable.
+score: 0.4

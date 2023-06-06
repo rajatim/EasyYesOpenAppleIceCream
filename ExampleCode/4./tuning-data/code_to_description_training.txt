@@ -1,0 +1,11 @@
+code: def add_numbers(a, b):\n    return a + b
+description: This is a Python function that takes two numbers as input arguments and returns the sum of the two numbers.
+
+code: function isPalindrome(str) {\n    const reversed = str.split('').reverse().join('');\n    return str === reversed;\n}
+description: This is a JavaScript function that checks if a given string is a palindrome. It takes a string as input, reverses it, and then compares the original and reversed strings to determine if they are the same.
+
+code: SELECT * FROM employees;
+description: This is a SQL query that selects all records from the "employees" table.
+
+code: public int factorial(int n) {\n    if (n == 0) {\n        return 1;\n    } else {\n        return n * factorial(n - 1);\n    }\n}
+description: This is a Java method that calculates the factorial of a given number. It takes an integer as input and returns the factorial of that number using recursion.

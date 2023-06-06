@@ -1,0 +1,20 @@
+en: Hello, how are you?
+fr: Bonjour, comment ça va?
+
+en: I am fine, thank you.
+fr: Je vais bien, merci.
+
+en: What is your name?
+fr: Comment vous appelez-vous?
+
+en: I am learning French.
+fr: J'apprends le français.
+
+en: Where is the train station?
+fr: Où se trouve la gare?
+
+en: How much does it cost?
+fr: Combien ça coûte?
+
+en: Have a nice day!
+fr: Passez une bonne journée!

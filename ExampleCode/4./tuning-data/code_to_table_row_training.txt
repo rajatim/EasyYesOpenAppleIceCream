@@ -1,0 +1,24 @@
+code: def add_numbers(a, b):\n    return a + b
+table_row: | Function Name | Description                                                    |\n|--------------|--------------------------------------------------------------------|\n| add_numbers  | This is a Python function that adds two numbers and returns the sum. |
+
+code: function isPalindrome(str) {\n    const reversed = str.split('').reverse().join('');\n    return str === reversed;\n}
+table_row: | Function Name | Description                                                                                       |\n|--------------|-------------------------------------------------------------------------------------------------------|\n| isPalindrome  | This is a JavaScript function that checks if a given string is a palindrome and returns a boolean value. |
+
+
+---
+
+
+code: def add_numbers(a, b):\n    return a + b
+description: This is a Python function that adds two numbers and returns the sum.
+
+
+---
+
+code: def add_numbers(a, b):\n    return a + b
+list_item: - Add two numbers and return the sum. (Python)
+
+
+---
+
+code: def add_numbers(a, b):\n    return a + b
+markdown: ## Function: `add_numbers`\n\nThis is a Python function that adds two numbers and returns the sum.

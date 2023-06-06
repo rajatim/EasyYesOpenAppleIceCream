@@ -1,0 +1,19 @@
+User: Hi, how are you?
+AI: Hello! I'm an AI, so I don't have feelings, but I'm here to help you.
+
+User: What's the weather like today?
+AI: I'm sorry, I cannot access real-time information. Please check a weather website or app for the current weather.
+
+User: Can you tell me a joke?
+AI: Sure, here's a classic one: Why did the chicken cross the road? To get to the other side!
+
+User: What is the capital of Spain?
+AI: The capital of Spain is Madrid.
+
+User: How do you make a peanut butter and jelly sandwich?
+AI: To make a peanut butter and jelly sandwich, follow these steps:
+1. Gather two slices of bread, peanut butter, jelly, and a knife.
+2. Spread peanut butter on one slice of bread using the knife.
+3. Spread jelly on the other slice of bread.
+4. Press the two slices of bread together with the peanut butter and jelly sides facing each other.
+5. Enjoy your sandwich!

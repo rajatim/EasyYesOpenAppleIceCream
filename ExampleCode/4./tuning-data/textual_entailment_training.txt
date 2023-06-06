@@ -1,0 +1,51 @@
+premise: A dog is barking at the park.
+hypothesis: A dog is making noise outside.
+relationship: E
+
+premise: The cat is sleeping on the couch.
+hypothesis: The cat is playing with a ball.
+relationship: C
+
+premise: She is cooking dinner in the kitchen.
+hypothesis: A woman is preparing a meal.
+relationship: E
+
+premise: The soccer player scored a goal.
+hypothesis: The soccer player missed the goal.
+relationship: C
+
+premise: The book is on the table.
+hypothesis: There is a book placed on a piece of furniture.
+relationship: E
+
+premise: The children are playing hide and seek.
+hypothesis: The children are doing their homework.
+relationship: C
+
+premise: The artist is painting a beautiful landscape.
+hypothesis: The artist is creating a piece of artwork.
+relationship: E
+
+premise: The car stopped at the red light.
+hypothesis: The car stopped at a traffic signal.
+relationship: E
+
+premise: The cat is sitting on the mat.
+hypothesis: There is a cat on the mat.
+relationship: entailment
+
+premise: The dog is playing in the park.
+hypothesis: The dog is sleeping.
+relationship: contradiction
+
+premise: The girl is reading a book in the library.
+hypothesis: The girl is studying in the library.
+relationship: neutral
+
+premise: The man is driving a car on the highway.
+hypothesis: The man is traveling in a vehicle.
+relationship: entailment
+
+premise: She is cooking dinner in the kitchen.
+hypothesis: She is baking a cake.
+relationship: neutral
